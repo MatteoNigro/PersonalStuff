@@ -103,3 +103,5 @@ fortune | cowsay
 
 Import-Module cowsay
 
+** Download and replace the Paradox file in the Themes folder (C:\Users\UserName\Documents\WindowsPowerShell\Modules\oh-my-posh\2.0.449\Themes)
+
