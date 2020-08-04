@@ -1,0 +1,78 @@
+** INITIAL SETUP **
+
+** Downlaod and install Windows Terminal from Microsfot Store
+** Open configuration file with ctrl+,
+** First profile in the list, copy this:
+
+  {
+        // Make changes here to the powershell.exe profile.
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "name": "Windows PowerShell",
+        "commandline": "powershell.exe",
+        "hidden": false,
+        "colorScheme": "Brogrammer",
+        "backgroundImage": "C:\\Users\\negar\\Pictures\\Icons\\Terminal Background.jpg",
+        "backgroundImageOpacity": 0.4,
+        "startingDirectory": "D:\\DOCUMENTI",
+        "closeOnExit": true,
+        "cursorShape": "vintage",
+        "fontFace": "DelugiaCode NF"
+
+      },
+      
+** Set the Theme in "schemes" array insertig this:
+
+ {
+      "name": "Brogrammer",
+      "black": "#1f1f1f",
+      "red": "#f81118",
+      "green": "#2dc55e",
+      "yellow": "#ecba0f",
+      "blue": "#2a84d2",
+      "purple": "#4e5ab7",
+      "cyan": "#1081d6",
+      "white": "#d6dbe5",
+      "brightBlack": "#d6dbe5",
+      "brightRed": "#de352e",
+      "brightGreen": "#1dd361",
+      "brightYellow": "#f3bd09",
+      "brightBlue": "#1081d6",
+      "brightPurple": "#5350b9",
+      "brightCyan": "#0f7ddb",
+      "brightWhite": "#ffffff",
+      "background": "#131313",
+      "foreground": "#d6dbe5"
+    }
+    
+** In the "keybindings" array insert this in the end:
+
+ {
+      "command": "newTab",
+      "keys": [ "ctrl+t" ]
+ }
+ 
+ ** STYLING **
+ 
+ ** From the command line Install this modules:
+ 
+Install-Module posh-git -Scope CurrentUser
+Install-Module oh-my-posh -Scope CurrentUser
+
+# Start the default settings
+Set-Prompt
+# Alternatively set the desired theme:
+Set-Theme Agnoster
+
+# If AllowPrerelease gives an error, delete it
+Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+
+** In command line write "notepad $profile" and copy paste this at the end of the file
+
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Paradox
+
+** Refer to this github repo for additional settings
+[ https://github.com/JanDeDobbeleer/oh-my-posh ]
+
+
