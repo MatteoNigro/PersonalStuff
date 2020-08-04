@@ -4,6 +4,8 @@
 ** Open configuration file with ctrl+,
 ** First profile in the list, copy this:
 
+---------------------------------------------------------------------------------------------------------------------------------------
+
   {
         // Make changes here to the powershell.exe profile.
         "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -20,7 +22,12 @@
 
       },
       
+---------------------------------------------------------------------------------------------------------------------------------------
+      
+** For the fontFace property you need to install the font (Fonts folder)      
 ** Set the Theme in "schemes" array insertig this:
+
+---------------------------------------------------------------------------------------------------------------------------------------
 
  {
       "name": "Brogrammer",
@@ -43,6 +50,8 @@
       "background": "#131313",
       "foreground": "#d6dbe5"
     }
+    
+---------------------------------------------------------------------------------------------------------------------------------------
     
 ** In the "keybindings" array insert this in the end:
 
@@ -75,4 +84,22 @@ Set-Theme Paradox
 ** Refer to this github repo for additional settings
 [ https://github.com/JanDeDobbeleer/oh-my-posh ]
 
+** Download fortune.txt and put it in %USERPROFILE%\Documents\WindowsPowerShell\
+** Open notepad $profile and paste this inside:
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+function fortune {
+	[System.IO.File]::ReadAllText((Split-Path $profile)+'\fortune.txt') -replace "`r`n", "`n" -split "`n%`n" | Get-Random
+}
+
+# Remove the line below if you do not want fortune to run when PowerShell starts
+fortune | cowsay
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+** Download cowsay.psm1 into a new folder called cowsay within your modules folder (C:\Users\UserName\Documents\WindowsPowerShell\Modules\
+** Call this command:
+
+Import-Module cowsay
 
