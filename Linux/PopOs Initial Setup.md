@@ -1,5 +1,5 @@
-* Initial Setup
-** Update and upgrade all packages
+## Initial Setup
+ ## Update and upgrade all packages
 - sudo apt update
 - sudo apt upgrade
 
