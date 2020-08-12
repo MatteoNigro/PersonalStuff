@@ -44,6 +44,18 @@ Set these aliases:
 - `alias srczsh="source ~/.zshrc"`
 - 
 
+## Some fun
+- `sudo apt install fortune`
+- `sudo apt install cowsay`
+- `sudo apt install figlet`
+- Make sure ruby is installed `ruby -v`
+- If not run `sudo apt install ruby`
+- `sudo gem install lolcat`
+- Then paste this inside the .zshrc file
+`echo "Work IDIOT" | figlet |lolcat
+fortune | cowsay -f tux | lolcat
+echo "TI BRUCIO LA MAMMAAAAAAAAAA!" | cowsay -f dragon-and-cow | lolcat`
+
 # Node.js
 Version LTS
 - `curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -`
@@ -72,6 +84,10 @@ Add an alias to the .zshrc file
 ## Extensions
 ### Themes/Color
 - Just Black
+- Seti Black
+- 1DarkRainCoat
+- JCSoftia
+- DeepDark Material
 - Material Color Theme
 - Bracket Pair Colorizer
 ### Workflow
@@ -80,8 +96,33 @@ Add an alias to the .zshrc file
 - autorename tag
 - fontsize shortcuts
 - toggle quotes
+- Code Spell Checker
 ### Intellisense/Autocomplete
-
+- IntelliSense for CSS class names in HTML
+- npm Intellisense
+- Path Intellisense
+- Vetur
+### Style/Formatting
+- ESLint
+- Beautify
+### Extra
+- Quokka.js
+- VS Live Share
+- Import Cost
+- Cloak
+- Remote SSH
+- Remote SSH Edit
+- Debugger for Chrome
+- Wallaby.js
+### Language Related
+- SQlite
+- Apollo GraphQL
+- Svelte
+- Docker
+- SQL Server (mssql)
+- Azure Account
+- Jest
+- Twig
 
 
 
